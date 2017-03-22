@@ -7,13 +7,70 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+import FirebaseDatabase
 
-class SnapsViewController: UIViewController {
+class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var snaps : [Snap] = []
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.dataSource = self
+        tableView.delegate = self
+        //loads the snaps available to look at
+        FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("snaps").observe(FIRDataEventType.childAdded, with: {(snapshot) in
+            print(snapshot)
+            
+            
+            let snap = Snap()
+            
+            let theValue = snapshot.value as! NSDictionary
+            
+            snap.imageURL = theValue["imageURL"] as! String
+            snap.from = theValue["from"] as! String
+            snap.descrip = theValue["description"] as! String
+
+
+            //adds the new snap to the snaps array
+            self.snaps.append(snap)
+            //reloads the tableView to show the new users
+            self.tableView.reloadData()
+        })
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return snaps.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        let snap = snaps[indexPath.row]
+        
+        cell.textLabel?.text = snap.from
+        return cell
+    }
+    
+    //functions for when the user selects the snap they want to view
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let snap = snaps[indexPath.row]
+        
+        performSegue(withIdentifier: "viewsnapsegue", sender: snap)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewsnapsegue" {
+        let nextVC = segue.destination as! ViewSnapViewController
+        
+        nextVC.snap = sender as! Snap
+        }
     }
 
     @IBAction func logoutTapped(_ sender: Any) {

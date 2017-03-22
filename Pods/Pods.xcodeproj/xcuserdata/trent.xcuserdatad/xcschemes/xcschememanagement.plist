@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Toast-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>039AE82F0CCF7EB326F98534C459C5F4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>15CE5219C5E2ABDFDBB39A3ABFF5D212</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8ED9547E9F6ADCDE4212B684956A772D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB83C5DF6C130573F11774B5C8E9BB35</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F159846F55E2A19BD15CF3612F4B735D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

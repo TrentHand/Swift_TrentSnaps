@@ -14,6 +14,7 @@
 		960E7FA91E81B436004F11CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960E7FA71E81B436004F11CA /* LaunchScreen.storyboard */; };
 		960E7FB11E81B770004F11CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 960E7FB01E81B770004F11CA /* GoogleService-Info.plist */; };
 		969E2F181E82BCFA00F813F0 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E2F171E82BCFA00F813F0 /* SnapsViewController.swift */; };
+		969E2F1A1E82C34B00F813F0 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E2F191E82C34B00F813F0 /* PictureViewController.swift */; };
 		AB60E6EE8E98464B32ABF400 /* Pods_TrentSnaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ADFEFB89F079DFA3B0651A /* Pods_TrentSnaps.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		960E7FAA1E81B436004F11CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		960E7FB01E81B770004F11CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		969E2F171E82BCFA00F813F0 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		969E2F191E82C34B00F813F0 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				960E7F9E1E81B436004F11CA /* AppDelegate.swift */,
 				960E7FA01E81B436004F11CA /* SignInViewController.swift */,
 				969E2F171E82BCFA00F813F0 /* SnapsViewController.swift */,
+				969E2F191E82C34B00F813F0 /* PictureViewController.swift */,
 				960E7FA21E81B436004F11CA /* Main.storyboard */,
 				960E7FA51E81B436004F11CA /* Assets.xcassets */,
 				960E7FA71E81B436004F11CA /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				960E7FA11E81B436004F11CA /* SignInViewController.swift in Sources */,
+				969E2F1A1E82C34B00F813F0 /* PictureViewController.swift in Sources */,
 				960E7F9F1E81B436004F11CA /* AppDelegate.swift in Sources */,
 				969E2F181E82BCFA00F813F0 /* SnapsViewController.swift in Sources */,
 			);

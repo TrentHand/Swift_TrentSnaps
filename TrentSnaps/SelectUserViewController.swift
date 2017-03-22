@@ -12,7 +12,7 @@ import FirebaseDatabase
 import FirebaseAuth
 
 class SelectUserViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     //the array of users we get back from Firebase
@@ -24,7 +24,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -41,12 +41,12 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
             //reloads the tableView to show the new users
             self.tableView.reloadData()
         })
-
         
-
-       
+        
+        
+        
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //setting the number of rows to the number of users
         return users.count
@@ -68,8 +68,12 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         let user = users[indexPath.row]
         
         let snap = ["from":FIRAuth.auth()?.currentUser?.email, "description":descrip, "imageURL":imageURL]
-        
         FIRDatabase.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
+        
+        //sending the user back to the home screen
+        navigationController!.popToRootViewController(animated: true)
     }
+    
 
+    
 }

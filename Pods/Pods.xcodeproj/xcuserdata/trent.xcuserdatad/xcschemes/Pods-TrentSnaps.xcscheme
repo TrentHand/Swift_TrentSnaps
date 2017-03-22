@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BE86A9CDFAD108FA2B2E5287FF4DE51B"
+               BlueprintIdentifier = "4FC46EA8333CFBDFF650E857922C59E0"
                BuildableName = "Pods_TrentSnaps.framework"
                BlueprintName = "Pods-TrentSnaps"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BE86A9CDFAD108FA2B2E5287FF4DE51B"
+            BlueprintIdentifier = "4FC46EA8333CFBDFF650E857922C59E0"
             BuildableName = "Pods_TrentSnaps.framework"
             BlueprintName = "Pods-TrentSnaps"
             ReferencedContainer = "container:Pods.xcodeproj">

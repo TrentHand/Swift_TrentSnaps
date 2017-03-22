@@ -65,7 +65,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
             } else {
                 
                 //moves them to the selectUser view
-                self.performSegue(withIdentifier: "selectUserSegue", sender: nil)
+                self.performSegue(withIdentifier: "selectUserSegue", sender: metadata?.downloadURL()!.absoluteString)
             }
         })
         
@@ -74,6 +74,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     //this is what happens before the segue is completed
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        let nextVC = segue.destination as! SelectUserViewController
+        nextVC.imageURL = sender as! String
+        nextVC.descrip = descriptionTextField.text!
     }
 }

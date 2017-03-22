@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 
 class SelectUserViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -16,6 +17,10 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     
     //the array of users we get back from Firebase
     var users : [User] = []
+    
+    var imageURL = ""
+    var descrip = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +61,15 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         
         cell.textLabel?.text = user.email
         return cell
+    }
+    
+    //determining what happens when the user selects who to send the snap to
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        
+        let snap = ["from":FIRAuth.auth()?.currentUser?.email, "description":descrip, "imageURL":imageURL]
+        
+        FIRDatabase.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
     }
 
 }

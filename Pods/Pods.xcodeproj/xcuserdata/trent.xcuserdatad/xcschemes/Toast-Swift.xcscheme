@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8ED9547E9F6ADCDE4212B684956A772D"
-               BuildableName = "Pods_TrentSnaps.framework"
-               BlueprintName = "Pods-TrentSnaps"
+               BlueprintIdentifier = "15CE5219C5E2ABDFDBB39A3ABFF5D212"
+               BuildableName = "Toast_Swift.framework"
+               BlueprintName = "Toast-Swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8ED9547E9F6ADCDE4212B684956A772D"
-            BuildableName = "Pods_TrentSnaps.framework"
-            BlueprintName = "Pods-TrentSnaps"
+            BlueprintIdentifier = "15CE5219C5E2ABDFDBB39A3ABFF5D212"
+            BuildableName = "Toast_Swift.framework"
+            BlueprintName = "Toast-Swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

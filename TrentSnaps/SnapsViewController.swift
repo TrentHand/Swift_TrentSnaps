@@ -25,9 +25,6 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         //loads the snaps available to look at
         FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("snaps").observe(FIRDataEventType.childAdded, with: {(snapshot) in
-            print(snapshot)
-            
-            
             let snap = Snap()
             
             let theValue = snapshot.value as! NSDictionary
@@ -35,12 +32,30 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             snap.imageURL = theValue["imageURL"] as! String
             snap.from = theValue["from"] as! String
             snap.descrip = theValue["description"] as! String
+            snap.key = snapshot.key
+            snap.uuid = theValue["uuid"] as! String
+            
 
 
             //adds the new snap to the snaps array
             self.snaps.append(snap)
             //reloads the tableView to show the new users
             self.tableView.reloadData()
+        })
+        
+        //loads the snaps available to look at after removing one
+        FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("snaps").observe(FIRDataEventType.childRemoved, with: {(snapshot) in
+            
+            //looping through the array to remove the proper snap
+            var index = 0
+            for snap in self.snaps {
+                if snap.key == snapshot.key {
+                    self.snaps.remove(at: index)
+                }
+                index += 1
+            }
+            self.tableView.reloadData()
+
         })
     }
     

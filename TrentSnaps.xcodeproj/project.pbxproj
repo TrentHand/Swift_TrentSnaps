@@ -13,8 +13,10 @@
 		960E7FA61E81B436004F11CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 960E7FA51E81B436004F11CA /* Assets.xcassets */; };
 		960E7FA91E81B436004F11CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960E7FA71E81B436004F11CA /* LaunchScreen.storyboard */; };
 		960E7FB11E81B770004F11CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 960E7FB01E81B770004F11CA /* GoogleService-Info.plist */; };
+		962D9BDD1E82E56800A0986E /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962D9BDC1E82E56800A0986E /* user.swift */; };
 		969E2F181E82BCFA00F813F0 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E2F171E82BCFA00F813F0 /* SnapsViewController.swift */; };
 		969E2F1A1E82C34B00F813F0 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E2F191E82C34B00F813F0 /* PictureViewController.swift */; };
+		969E2F1E1E82D92500F813F0 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E2F1D1E82D92500F813F0 /* SelectUserViewController.swift */; };
 		AB60E6EE8E98464B32ABF400 /* Pods_TrentSnaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ADFEFB89F079DFA3B0651A /* Pods_TrentSnaps.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +32,10 @@
 		960E7FA81E81B436004F11CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		960E7FAA1E81B436004F11CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		960E7FB01E81B770004F11CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		962D9BDC1E82E56800A0986E /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		969E2F171E82BCFA00F813F0 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		969E2F191E82C34B00F813F0 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		969E2F1D1E82D92500F813F0 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +71,35 @@
 		960E7F9D1E81B436004F11CA /* TrentSnaps */ = {
 			isa = PBXGroup;
 			children = (
-				960E7F9E1E81B436004F11CA /* AppDelegate.swift */,
-				960E7FA01E81B436004F11CA /* SignInViewController.swift */,
-				969E2F171E82BCFA00F813F0 /* SnapsViewController.swift */,
-				969E2F191E82C34B00F813F0 /* PictureViewController.swift */,
-				960E7FA21E81B436004F11CA /* Main.storyboard */,
+				962D9BDE1E82E58C00A0986E /* ViewControllers */,
+				962D9BDF1E82E5B600A0986E /* Models */,
 				960E7FA51E81B436004F11CA /* Assets.xcassets */,
+				960E7FA21E81B436004F11CA /* Main.storyboard */,
 				960E7FA71E81B436004F11CA /* LaunchScreen.storyboard */,
 				960E7FAA1E81B436004F11CA /* Info.plist */,
 				960E7FB01E81B770004F11CA /* GoogleService-Info.plist */,
 			);
 			path = TrentSnaps;
+			sourceTree = "<group>";
+		};
+		962D9BDE1E82E58C00A0986E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				960E7F9E1E81B436004F11CA /* AppDelegate.swift */,
+				960E7FA01E81B436004F11CA /* SignInViewController.swift */,
+				969E2F171E82BCFA00F813F0 /* SnapsViewController.swift */,
+				969E2F191E82C34B00F813F0 /* PictureViewController.swift */,
+				969E2F1D1E82D92500F813F0 /* SelectUserViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		962D9BDF1E82E5B600A0986E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				962D9BDC1E82E56800A0986E /* user.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		BF8856C3367BD8B5EDBE3551 /* Frameworks */ = {
@@ -223,6 +245,8 @@
 			files = (
 				960E7FA11E81B436004F11CA /* SignInViewController.swift in Sources */,
 				969E2F1A1E82C34B00F813F0 /* PictureViewController.swift in Sources */,
+				962D9BDD1E82E56800A0986E /* user.swift in Sources */,
+				969E2F1E1E82D92500F813F0 /* SelectUserViewController.swift in Sources */,
 				960E7F9F1E81B436004F11CA /* AppDelegate.swift in Sources */,
 				969E2F181E82BCFA00F813F0 /* SnapsViewController.swift in Sources */,
 			);

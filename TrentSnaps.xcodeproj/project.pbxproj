@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		960E7F9F1E81B436004F11CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E7F9E1E81B436004F11CA /* AppDelegate.swift */; };
-		960E7FA11E81B436004F11CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E7FA01E81B436004F11CA /* ViewController.swift */; };
+		960E7FA11E81B436004F11CA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E7FA01E81B436004F11CA /* SignInViewController.swift */; };
 		960E7FA41E81B436004F11CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960E7FA21E81B436004F11CA /* Main.storyboard */; };
 		960E7FA61E81B436004F11CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 960E7FA51E81B436004F11CA /* Assets.xcassets */; };
 		960E7FA91E81B436004F11CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960E7FA71E81B436004F11CA /* LaunchScreen.storyboard */; };
 		960E7FB11E81B770004F11CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 960E7FB01E81B770004F11CA /* GoogleService-Info.plist */; };
+		969E2F181E82BCFA00F813F0 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E2F171E82BCFA00F813F0 /* SnapsViewController.swift */; };
 		AB60E6EE8E98464B32ABF400 /* Pods_TrentSnaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ADFEFB89F079DFA3B0651A /* Pods_TrentSnaps.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +23,13 @@
 		76DE22B1519D6020DE56A6D9 /* Pods-TrentSnaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrentSnaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrentSnaps/Pods-TrentSnaps.debug.xcconfig"; sourceTree = "<group>"; };
 		960E7F9B1E81B436004F11CA /* TrentSnaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrentSnaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		960E7F9E1E81B436004F11CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		960E7FA01E81B436004F11CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		960E7FA01E81B436004F11CA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		960E7FA31E81B436004F11CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		960E7FA51E81B436004F11CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		960E7FA81E81B436004F11CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		960E7FAA1E81B436004F11CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		960E7FB01E81B770004F11CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		969E2F171E82BCFA00F813F0 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				960E7F9E1E81B436004F11CA /* AppDelegate.swift */,
-				960E7FA01E81B436004F11CA /* ViewController.swift */,
+				960E7FA01E81B436004F11CA /* SignInViewController.swift */,
+				969E2F171E82BCFA00F813F0 /* SnapsViewController.swift */,
 				960E7FA21E81B436004F11CA /* Main.storyboard */,
 				960E7FA51E81B436004F11CA /* Assets.xcassets */,
 				960E7FA71E81B436004F11CA /* LaunchScreen.storyboard */,
@@ -215,8 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				960E7FA11E81B436004F11CA /* ViewController.swift in Sources */,
+				960E7FA11E81B436004F11CA /* SignInViewController.swift in Sources */,
 				960E7F9F1E81B436004F11CA /* AppDelegate.swift in Sources */,
+				969E2F181E82BCFA00F813F0 /* SnapsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +384,7 @@
 				960E7FAF1E81B436004F11CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

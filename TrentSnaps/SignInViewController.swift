@@ -47,6 +47,8 @@ class SignInViewController: UIViewController {
                 print("Sign in successful!")
                 //moving the user into the next screen after a successful signin
                 self.performSegue(withIdentifier: "signinsegue", sender: nil)
+                self.emailTextField.text = ""
+                self.passwordTextField.text = ""
             }
             //completion is asking what should happen after the email/password are done
         })

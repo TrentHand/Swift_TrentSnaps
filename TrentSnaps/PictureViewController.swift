@@ -24,6 +24,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.isEnabled = false
         
         // Do any additional setup after loading the view.
         imagePicker.delegate = self
@@ -38,6 +39,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         //changes the background color to be invisible if they pick an image that doesn't fill the background
         imageView.backgroundColor = UIColor.clear
+
+        nextButton.isEnabled = true
         
         imagePicker.dismiss(animated: true, completion: nil)
     }

@@ -85,9 +85,13 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //functions for when the user selects the snap they want to view
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        if snaps.count == 0 {
+            print("There are no snaps")
+        } else {
         let snap = snaps[indexPath.row]
-        
         performSegue(withIdentifier: "viewsnapsegue", sender: snap)
+        }
         
     }
     
